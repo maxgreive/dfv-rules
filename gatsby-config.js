@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    siteTitle: `@rocketseat/gatsby-theme-docs`,
-    defaultTitle: `@rocketseat/gatsby-theme-docs`,
-    siteTitleShort: `gatsby-theme-docs`,
-    siteDescription: `Out of the box Gatsby Theme for creating documentation websites easily and quickly`,
-    siteUrl: `https://rocketdocs.netlify.com`,
-    siteAuthor: `@rocketseat`,
+    siteTitle: `DFV Regeln`,
+    defaultTitle: `DFV Regeln`,
+    siteTitleShort: `dfv-regeln`,
+    siteDescription: `Alle Regeln der Scheibensportarten Disc Golf, Ultimate und Freestyle.`,
+    siteUrl: `https://dfv-rules.netlify.com`,
+    siteAuthor: `@maxgreive`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
     themeColor: `#7159c1`,
