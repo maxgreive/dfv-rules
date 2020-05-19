@@ -10,7 +10,7 @@ module.exports = {
     siteLanguage: `en`,
     themeColor: `#7159c1`,
     basePath: `/`,
-    footer: `Theme by Rocketseat`,
+    footer: `Built by Greive.tech`,
   },
   plugins: [
     {
@@ -18,8 +18,8 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        githubUrl: `https://github.com/rocketseat/gatsby-themes`,
-        baseDir: `examples/gatsby-theme-docs`,
+        githubUrl: `https://github.com/maxgreive/dfv-rules`,
+        baseDir: `/`,
       },
     },
     {
