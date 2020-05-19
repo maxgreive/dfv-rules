@@ -1,14 +1,16 @@
 # Sidebar navigation
 
-- label: 'Introduction'
+- label: 'Einführung'
   link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
-- label: Usage
+- label: 'Mitmachen'
+  link: '/mitmachen'
+- label: Regeln
   items:
-    - label: 'Creating docs'
-      link: '/usage/creating-docs'
-    - label: 'Navigation'
-      link: '/usage/navigation'
-    - label: 'Shadowing'
-      link: '/usage/shadowing'
+    - label: 'Disc Golf'
+      link: '/disc-golf/regeln'
+    - label: 'Ultimate'
+      link: '/ultimate/regeln'
+    - label: 'Freestyle'
+      link: '/freestyle/regeln'
+    - label: 'Spirit of the game'
+      link: '/spirit-of-the-game/regeln'
