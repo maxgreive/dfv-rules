@@ -2,6 +2,7 @@ export default {
   colors: {
     primary: '#4299E1',
     background: '#fff',
+    text: '#4A5568',
     sidebar: {
       background: '#ffffff',
       link: '#718096',

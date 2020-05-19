@@ -20,7 +20,7 @@ export default function GlobalStyle() {
         }
 
         *::selection {
-          background: ${lighten('0.35', '#737380')}!important;
+          background: ${lighten('0.35', '#718096')}!important;
         }
 
         body {
@@ -32,7 +32,7 @@ export default function GlobalStyle() {
 
         h1 {
           font-size: 32px;
-          color: #333;
+          color: #4A5568;
           font-weight: normal;
           margin-bottom: 24px;
         }
@@ -54,13 +54,13 @@ export default function GlobalStyle() {
         h4,
         h5,
         h6 {
-          color: #737380;
+          color: ${theme.colors.text};
           margin: 24px 0 16px 0;
           font-weight: normal;
         }
 
         p {
-          color: #737380;
+          color: ${theme.colors.text};
           font-size: 16px;
           line-height: 28px;
           margin-bottom: 16px;
@@ -82,7 +82,7 @@ export default function GlobalStyle() {
         }
 
         a {
-          color: #737380;
+          color: #4A5568;
           font-weight: bold;
 
           &:hover {
@@ -141,7 +141,7 @@ export default function GlobalStyle() {
 
         ul,
         ol {
-          color: #737380;
+          color: ${theme.colors.text};
           padding-left: 15px;
           margin-bottom: 16px;
 
