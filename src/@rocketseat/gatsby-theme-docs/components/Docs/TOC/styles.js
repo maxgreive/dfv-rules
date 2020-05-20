@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin-left: 3rem;
   max-width: 18rem;
   top: 4rem;
-  max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem);
+  max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem - 5rem);
   overflow: auto;
   width: 100%;
   max-width: 25%;
@@ -45,6 +45,10 @@ export const Container = styled.div`
         }
       }
     }
+  }
+
+  @media (max-width: 780px) {
+    max-height: calc(100vh - 4rem - 2.5rem - 3rem - 3rem - 10rem);
   }
 
   @media (max-width: 1200px) {

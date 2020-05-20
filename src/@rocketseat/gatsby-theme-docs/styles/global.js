@@ -28,6 +28,8 @@ export default function GlobalStyle() {
           font-family: 'Roboto', sans-serif;
           background-color: ${theme.colors.background};
           text-rendering: optimizelegibility;
+          max-width: 100vw;
+          overflow-x: hidden;
         }
 
         h1 {
