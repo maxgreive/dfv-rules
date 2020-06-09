@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import TableOfContents from '../Docs/TOC';
-import Sidebar from '@rocketseat/gatsby-theme-docs/src/components/Sidebar';
+import Sidebar from '../Sidebar';
 import Header from '@rocketseat/gatsby-theme-docs/src/components/Header';
 import { Wrapper, Main, Title, Children } from './styles';
 // import algoliasearch from "algoliasearch/lite";

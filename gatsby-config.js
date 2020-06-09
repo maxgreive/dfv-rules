@@ -15,6 +15,7 @@ module.exports = {
     themeColor: `#7159c1`,
     basePath: `/`,
     footer: `Built by Greive.tech`,
+    footerLink: `https://greive.tech/`,
   },
   plugins: [
     {
