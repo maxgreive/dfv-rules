@@ -5,13 +5,15 @@ import TableOfContents from '../Docs/TOC';
 import Sidebar from '../Sidebar';
 import Header from '@rocketseat/gatsby-theme-docs/src/components/Header';
 import { Wrapper, Main, Title, Children } from './styles';
-// import algoliasearch from "algoliasearch/lite";
-// import {
-//   InstantSearch,
-//   SearchBox,
-//   Hits
-// } from 'react-instantsearch-dom'
-// import PostPreview from '../post-preview'
+import algoliasearch from "algoliasearch/lite";
+import {
+  InstantSearch,
+  SearchBox,
+  Stats,
+  Hits,
+  connectStateResults
+} from 'react-instantsearch-dom'
+import PostPreview from '../post-preview'
 
 export default function Layout({
   children,
@@ -27,25 +29,38 @@ export default function Layout({
     setMenuOpen(!isMenuOpen);
   }
 
-  // const searchClient = algoliasearch(
-  //   process.env.GATSBY_ALGOLIA_APP_ID,
-  //   process.env.GATSBY_ALGOLIA_SEARCH_KEY
-  // )
+  const searchClient = algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  )
+
+  const Results = connectStateResults(({ searchState, children }) =>
+    searchState && searchState.query ? (
+      <div>
+        {children}
+      </div>
+    ) : (
+      null
+    )
+  );
+
 
   return (
     <>
       <Sidebar isMenuOpen={isMenuOpen} />
       <Header handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen} />
       <Wrapper isMenuOpen={isMenuOpen}>
-        {/* <InstantSearch searchClient={searchClient} indexName="rules">
+        <InstantSearch searchClient={searchClient} indexName="rules">
           <SearchBox translations={{
             placeholder: 'Alle Regeln durchsuchen … ',
             resetTitle: 'Eingabe löschen',
             submitTitle: 'Eingabe suchen'
           }} />
-          <Results />
-          <Hits hitComponent={PostPreview} />
-        </InstantSearch> */}
+          <Results>
+            <Stats />
+            <Hits hitComponent={PostPreview} />
+          </Results>
+        </InstantSearch>
         {title && <Title>{title}</Title>}
         <Main disableTOC={disableTOC}>
           {!disableTOC && <TableOfContents headings={headings} />}
