@@ -20,6 +20,10 @@ const docsQuery = `
 const queries = [
 	{
 		query: docsQuery,
+		settings: {
+			attributeForDistinct: 'headline',
+			distinct: true,
+		},
 		transformer: ({ data }) => {
 			return data.allMdx.nodes.reduce((indices, rules) => {
 				const pChunks = rules.internal.content.split('\n')

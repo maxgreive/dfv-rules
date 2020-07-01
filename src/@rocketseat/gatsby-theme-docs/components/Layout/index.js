@@ -7,6 +7,7 @@ import Header from '@rocketseat/gatsby-theme-docs/src/components/Header';
 import { Wrapper, Main, Title, Children } from './styles';
 import algoliasearch from "algoliasearch/lite";
 import {
+  Configure,
   InstantSearch,
   SearchBox,
   Stats,
@@ -51,6 +52,7 @@ export default function Layout({
       <Header handleMenuOpen={handleMenuOpen} isMenuOpen={isMenuOpen} />
       <Wrapper isMenuOpen={isMenuOpen}>
         <InstantSearch searchClient={searchClient} indexName="rules">
+          <Configure distinct />
           <SearchBox translations={{
             placeholder: 'Alle Regeln durchsuchen … ',
             resetTitle: 'Eingabe löschen',
