@@ -488,6 +488,14 @@ a[class^='ais-'] {
   .ais-Results-item {
     margin: 0.5rem 0 0.5rem 1rem; }
 
+@media (max-width: 780px) {
+  .ais-InfiniteHits-item,
+.ais-InfiniteResults-item,
+.ais-Hits-item,
+.ais-Results-item {
+  width: calc(100% - 1rem);}
+}
+
 .ais-InfiniteHits-loadMore,
 .ais-InfiniteResults-loadMore {
   margin-top: 1rem; }
@@ -814,4 +822,5 @@ a[class^='ais-'] {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.8rem;
+  text-align: right;
   color: #718096;}
