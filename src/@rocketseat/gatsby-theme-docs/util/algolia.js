@@ -1,3 +1,5 @@
+const { default: slug } = require("./slug")
+
 const docsQuery = `
 	{
 		allMdx {
@@ -63,7 +65,7 @@ const queries = [
 
 				const chunkMap = chunks.map((chnk, index) => ({
 					id: rules.objectId + '/' + index,
-					slug: rules.fields.slug + '#' + slugify(chnk.headline),
+					slug: rules.fields.slug + '#' + slug(chnk.headline),
 					section: chnk.section,
 					headline: chnk.headline,
 					title: chnk.title,
@@ -77,14 +79,5 @@ const queries = [
 		},
 	},
 ]
-
-function slugify(str) {
-	return str.toString().toLowerCase()
-		.replace(/\s+/g, '-')
-		.replace(/[^\w\-]+/g, '')
-		.replace(/\-\-+/g, '-')
-		.replace(/^-+/, '')
-		.replace(/-+$/, '');
-}
 
 module.exports = queries
