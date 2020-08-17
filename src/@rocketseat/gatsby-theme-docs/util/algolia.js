@@ -55,6 +55,7 @@ const queries = [
 								title: title.replace('title: ', ''),
 								section: section.replace('# ', ''),
 								headline: headline.replace('## ', ''),
+								subheadline: subheadline.replace('###', ''),
 								string: string
 							}
 						)
@@ -63,7 +64,7 @@ const queries = [
 
 				const chunkMap = chunks.map((chnk, index) => ({
 					id: rules.objectId + '/' + index,
-					slug: rules.fields.slug + '#' + slug(chnk.headline),
+					slug: rules.fields.slug + '#' + slug(chnk.subheadline || chnk.headline),
 					section: chnk.section,
 					headline: chnk.headline,
 					title: chnk.title,
