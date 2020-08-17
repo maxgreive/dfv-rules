@@ -823,4 +823,7 @@ a[class^='ais-'] {
   letter-spacing: 1px;
   font-size: 0.8rem;
   text-align: right;
-  color: #718096;}
+  color: #718096;
+  margin-right: 1rem;
+  flex-grow: 0;
+}

@@ -40,8 +40,7 @@ const queries = [
 						section = ''
 						headline = ''
 						subheadline = ''
-					}
-					else if (string.indexOf('###') == 0) {
+					} else if (string.indexOf('###') == 0) {
 						subheadline = string
 					} else if (string.indexOf('##') == 0) {
 						headline = string
@@ -64,7 +63,7 @@ const queries = [
 
 				const chunkMap = chunks.map((chnk, index) => ({
 					id: rules.objectId + '/' + index,
-					slug: rules.fields.slug + '#' + chnk.headline.replace(/\s+/g, '-').toLowerCase(),
+					slug: rules.fields.slug + '#' + slugify(chnk.headline),
 					section: chnk.section,
 					headline: chnk.headline,
 					title: chnk.title,
@@ -78,5 +77,14 @@ const queries = [
 		},
 	},
 ]
+
+function slugify(str) {
+	return str.toString().toLowerCase()
+		.replace(/\s+/g, '-')
+		.replace(/[^\w\-]+/g, '')
+		.replace(/\-\-+/g, '-')
+		.replace(/^-+/, '')
+		.replace(/-+$/, '');
+}
 
 module.exports = queries
