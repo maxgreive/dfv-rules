@@ -1,4 +1,4 @@
-const { default: slug } = require("./slug")
+import slug from './slug';
 
 const docsQuery = `
 	{
