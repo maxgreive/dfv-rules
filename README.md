@@ -1,5 +1,5 @@
-# dfv-rules
+# dfv-regeln
 
 Regelwerk für die drei Frisbeesportarten Ultimate, Disc Golf und Freestyle
 
-https://dfv-rules.netlify.app
+https://dfv-regeln.netlify.app

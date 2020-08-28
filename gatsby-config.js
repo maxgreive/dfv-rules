@@ -8,7 +8,7 @@ module.exports = {
     defaultTitle: `DFV Regeln`,
     siteTitleShort: `DFV Regeln`,
     siteDescription: `Alle Regeln der Scheibensportarten Disc Golf, Ultimate und Freestyle.`,
-    siteUrl: `https://dfv-rules.netlify.com`,
+    siteUrl: `https://dfv-regeln.netlify.com`,
     siteAuthor: `@maxgreive`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
