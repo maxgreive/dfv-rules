@@ -1,0 +1,4 @@
+# Redirects from what the browser requests to what we serve
+/disc-golf          /disc-golf/regeln
+/ultimate           /ultimate/regeln
+/spirit-of-the-game /spirit-of-the-game/regeln
